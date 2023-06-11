@@ -1,0 +1,85 @@
+
+{% extends 'base.html' %}
+{% block title %}
+        About Us
+{% endblock %}
+
+{% block styles %}
+<style>
+    .title {
+        color: #5C6AC4;
+    }
+
+    .container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    
+    .box {
+      flex-basis: calc(33.33% - 20px);
+      border: 1px solid black;
+      padding: 10px;
+      margin: 10px;
+      text-align: center;
+    }
+    
+    .box img {
+      width: 100px;
+      height: 100px;
+      object-fit: cover;
+      border-radius: 50%;
+      margin-bottom: 10px;
+    }
+
+</style>
+{% endblock %}
+
+
+{% block content %}
+<div class="container d-flex justify-content-center my-3">
+  <h1>KELOMPOK 1</h1>
+    <div class="d-flex justify-content-around">
+        <div class="box">
+            <img src="{{url_for('display_image', filename = 'Samuel_Sibuea.jpg')}}" alt="Samuel Sibuea">
+            <h4>Samuel I. H. Sibuea</h4>
+            <p>ifs20004@students.del.ac.id</p>
+          </div>
+          <div class="box">
+            <img src="{{url_for('display_image', filename = 'Sri_Rahayu.jpeg')}}" alt="Sri Rahayu">
+            <h4>Sri Rahayu Saragih</h4>
+            <p>ifs20040@students.del.ac.id</p>
+          </div>
+          <div class="box">
+            <img src="{{url_for('display_image', filename = 'Theresia_Yolanda.jpeg')}}" alt="Theresia Yolanda">
+            <h4>Theresia Yolanda Laura Hutabarat</h4>
+            <p>Ifs20048@student.del.ac.id</p>
+          </div>
+    </div>
+    <div class="d-flex justify-content-around">
+        <div class="box">
+            <img src="{{url_for('display_image', filename = 'Rachel_Riris.jpeg')}}" alt="Rachel Riris">
+            <h4>Rachel Riris Rotua Damanik</h4>
+            <p>ifs20046@students.del.ac.id</p>
+          </div>
+          <div class="box">
+            <img src="{{url_for('display_image', filename = 'Rizal_Sahala.JPG')}}" alt="Rizal Sahala">
+            <h4>Rizal Sahala Samosir</h4>
+            <p>ifs20029@students.del.ac.id</p>
+          </div>
+          <div class="box">
+            <img src="{{url_for('display_image', filename = 'Chantika_Nadya.jpeg')}}" alt="Chantika Nadya">
+            <h4>Chantika Nadya Serebella Pardosi</h4>
+            <p>ifs20013@students.del.ac.id</p>
+          </div>
+          <div class="box">
+            <img src="{{url_for('display_image', filename = 'Bryand_Christoper.jpeg')}}" alt="Bryand Cristoper">
+            <h4>Bryand Christofer Sinaga </h4>
+            <p>ifs20027@students.del.ac.id</p>
+          </div>
+    </div>
+  </div>
+{% endblock %}
+
+
+

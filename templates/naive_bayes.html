@@ -1,0 +1,27 @@
+
+{% extends 'base.html' %}
+{% block title %}
+        About Naive Bayes
+{% endblock %}
+{% block content %}
+<div class="container-fluid p-xl-5">
+        <h1 class="text-center py-3">Algoritma Naive Bayes</h1>
+        <div class="row justify-content-center">
+                <div class="col-12 col-md-6">
+                        <p>     
+                                Naive Bayes adalah metode klasifikasi yang digunakan untuk memprediksi kelas suatu contoh berdasarkan fitur-fitur yang ada. 
+                                Metode ini didasarkan pada teorema Bayes, yang menghitung probabilitas posterior kelas berdasarkan probabilitas prior dan kemungkinan terjadi fitur-fitur tersebut dalam setiap kelas.
+                                <br><br>
+                                Naive Bayes bekerja dengan asumsi sederhana bahwa setiap fitur adalah independen satu sama lain, artinya tidak ada korelasi antara fitur-fitur tersebut. Proses klasifikasi dengan Naive Bayes dimulai dengan mengumpulkan contoh-contoh dengan label kelas yang diketahui. Kemudian, metode ini mempelajari distribusi fitur-fitur dari setiap kelas dengan menghitung probabilitas prior dan kemungkinan terjadi fitur-fitur dalam setiap kelas.
+                        </p>
+                        <figure class="figure d-block mx-auto py-2">
+                                <img class="d-block mx-auto" src="{{url_for('display_image', filename = 'naive_bayes.gif')}}" alt="Naive Bayes" >
+                                <figcaption class="figure-caption text-center">Pic 1. Naive Bayes</figcaption>
+                        </figure>
+                        <p>
+                                Keuntungan Naive Bayes adalah metode yang cepat dalam pelatihan dan klasifikasi. Namun, perlu diingat bahwa Naive Bayes tidak dapat menangani korelasi antara fitur-fitur dan rentan terhadap overfitting jika terdapat fitur yang sangat dominan dalam data. Oleh karena itu, metode ini perlu digunakan dengan hati-hati dan mempertimbangkan karakteristik data yang akan diproses.
+                        </p>
+                </div>
+              </div>
+</div>
+{% endblock %}

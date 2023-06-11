@@ -1,0 +1,43 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <title> 
+        {% block title %}{% endblock %}
+    </title>
+        {% block styles %}{% endblock %}
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+        <a class="navbar-brand h5 px-2" href="/">Cryotherapy Analysis</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse d-flex justify-content-end" id="navbarNavAltMarkup">
+          <div class="navbar-nav px-5">
+            <a class="nav-item nav-link px-lg-5 " href="/">Home <span class="sr-only">(current)</span></a>
+            <a class="nav-item nav-link px-lg-5 " href="/naive_bayes">About Naive Bayes</a>
+            <a class="nav-item nav-link px-lg-5 " href="/about">About Us</a>
+          </div>
+        </div>
+      </nav>
+
+      <script>
+        // add active class to nav links
+          $(document).ready(function() {
+            var url = window.location;
+            $('nav a[href="'+ url +'"]').addClass('active');
+            $('nav a').filter(function() {
+                 return this.href == url;
+            }).addClass('active');
+        });
+        </script>
+        {% block content %}
+        {% endblock %}
+</body>
+</html>

@@ -1,0 +1,26 @@
+# if you dont have pip, first install it
+# https://pip.pypa.io/en/stable/installing/
+
+# upgrade pip
+python.exe -m pip install --upgrade pip
+
+# install virtualenv
+pip install virtualenv
+
+# install scikit learn/ sklearn
+pip install sklearn
+# pip install scikit-learn
+
+# install pandas
+pip install pandas
+
+# install flask
+pip install flask
+
+# install pickle
+pip install pickle-mixin
+pip install pickleshare
+
+# activate the virtual environment
+# source env/bin/activate
+env/Scripts/activate

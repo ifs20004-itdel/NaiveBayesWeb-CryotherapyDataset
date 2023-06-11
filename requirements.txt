@@ -1,11 +1,21 @@
 # if you dont have pip, first install it
 # https://pip.pypa.io/en/stable/installing/
 
-# upgrade pip
-python.exe -m pip install --upgrade pip
-
 # install virtualenv
 pip install virtualenv
+
+# create the env
+virtualenv env
+
+# First of all set up a virtual environment
+Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope LocalMachine
+
+# activate the virtual environment
+# source env/bin/activate
+env/Scripts/activate
+
+# upgrade pip
+python.exe -m pip install --upgrade pip
 
 # install scikit learn/ sklearn
 pip install sklearn
@@ -21,6 +31,5 @@ pip install flask
 pip install pickle-mixin
 pip install pickleshare
 
-# activate the virtual environment
-# source env/bin/activate
-env/Scripts/activate
+# run the application
+flask run
